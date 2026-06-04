@@ -1,0 +1,395 @@
+/* ==========================================================================
+   Clients — Premium "WOW" edition
+   ========================================================================== */
+
+/* ── Section shell ─────────────────────────────────────── */
+.clients-section {
+  position: relative;
+  width: 100%;
+  height: 640px;
+  overflow: hidden;
+  background: #03040c;
+  /* Neon edge lines */
+}
+
+.clients-section::before,
+.clients-section::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  height: 2px;
+  z-index: 5;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(34,211,238,.7) 25%,
+    rgba(168,85,247,.7) 50%,
+    rgba(236,72,153,.7) 75%,
+    transparent 100%);
+}
+
+.clients-section::before { top: 0; }
+.clients-section::after  { bottom: 0; }
+
+/* ── Background image ──────────────────────────────────── */
+.cs-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.cs-bg__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 58%;
+  animation: csBgZoom 24s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes csBgZoom {
+  from { transform: scale(1.00); }
+  to   { transform: scale(1.06); }
+}
+
+/* Overlay: thin darken at edges, transparent in the middle */
+.cs-bg__overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg,
+      rgba(3,4,12,.85)  0%,
+      rgba(3,4,12,.05) 18%,
+      rgba(3,4,12,.00) 45%,
+      rgba(3,4,12,.10) 65%,
+      rgba(3,4,12,.90) 100%),
+    linear-gradient(90deg,
+      rgba(3,4,12,.55) 0%,
+      transparent 8%,
+      transparent 92%,
+      rgba(3,4,12,.55) 100%);
+}
+
+/* Colour atmosphere glows */
+.cs-bg__glow-left {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 50% 65% at 15% 55%,
+    rgba(236,72,153,.22) 0%, transparent 60%);
+}
+
+.cs-bg__glow-right {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 50% 65% at 85% 55%,
+    rgba(34,211,238,.22) 0%, transparent 60%);
+}
+
+/* Fine scanlines for a hi-tech feel */
+.cs-bg__scanline {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    rgba(255,255,255,.012) 3px,
+    rgba(255,255,255,.012) 4px
+  );
+}
+
+/* ── Foreground content ─────────────────────────────────── */
+.cs-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* ── Badge ──────────────────────────────────────────────── */
+.cs-headline {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .9rem;
+}
+
+.cs-headline__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  padding: .38rem 1.1rem;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.95);
+  background: rgba(34,211,238,.08);
+  border: 1px solid rgba(34,211,238,.35);
+  border-radius: 999px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 0 18px rgba(34,211,238,.12), inset 0 1px 0 rgba(255,255,255,.08);
+}
+
+.cs-headline__dot {
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22d3ee;
+  box-shadow: 0 0 10px #22d3ee, 0 0 20px rgba(34,211,238,.4);
+  animation: csDotPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes csDotPulse {
+  0%, 100% { opacity: 1;   transform: scale(1);    box-shadow: 0 0 8px #22d3ee; }
+  50%       { opacity: .75; transform: scale(1.35); box-shadow: 0 0 22px #22d3ee, 0 0 40px rgba(34,211,238,.5); }
+}
+
+/* ── Title ──────────────────────────────────────────────── */
+.cs-headline__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -.03em;
+  color: #fff;
+  text-shadow:
+    0 2px 4px rgba(0,0,0,.6),
+    0 8px 40px rgba(0,0,0,.5);
+}
+
+.cs-headline__title .text-gradient {
+  background: linear-gradient(135deg, #22d3ee 0%, #a855f7 50%, #ec4899 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 16px rgba(168,85,247,.4));
+}
+
+/* Subtitle */
+.cs-headline__sub {
+  margin: 0;
+  max-width: 480px;
+  font-size: clamp(.88rem, 1.6vw, 1rem);
+  color: rgba(255,255,255,.60);
+  line-height: 1.65;
+  text-shadow: 0 2px 8px rgba(0,0,0,.6);
+}
+
+/* ── Stats — 4 individual glass cards ──────────────────── */
+.cs-stats {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cs-stats__divider { display: none; }   /* not needed in card layout */
+
+.cs-stats__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: .9rem 1.8rem;
+  min-width: 120px;
+  gap: .2rem;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
+  transition: transform .3s cubic-bezier(.22,1,.36,1);
+  cursor: default;
+  /* subtle separator between cards */
+  position: relative;
+}
+
+.cs-stats__item::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background: rgba(255,255,255,.18);
+}
+
+.cs-stats__item:last-child::after { display: none; }
+
+.cs-stats__item:hover {
+  transform: translateY(-4px);
+}
+
+.cs-stats__item strong {
+  font-family: var(--font-display);
+  font-size: clamp(1.65rem, 3.2vw, 2.2rem);
+  font-weight: 900;
+  line-height: 1;
+  background: linear-gradient(135deg, #22d3ee, #a855f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter:
+    drop-shadow(0 0 10px rgba(34,211,238,.5))
+    drop-shadow(0 2px 6px rgba(0,0,0,.8));
+}
+
+.cs-stats__item strong span {
+  font-size: .65em;
+}
+
+.cs-stats__item > span {
+  font-size: .62rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.75);
+  text-shadow: 0 1px 6px rgba(0,0,0,.9);
+}
+
+/* ── Logo marquee strip ─────────────────────────────────── */
+.cs-logos {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  animation: none;
+  box-shadow: none;
+}
+
+@keyframes csBorderFlow {
+  to { background-position: 300% 50%; }
+}
+
+.cs-logos__inner {
+  border-radius: 0;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  overflow: hidden;
+  padding: .5rem 0;
+}
+
+.cs-marquee-wrap {
+  mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent) !important;
+}
+
+.clients-section .marquee-track {
+  align-items: center;
+  gap: 0 !important;
+}
+
+.clients-section .marquee-animate {
+  animation-duration: 36s !important;
+}
+
+/* Logo items — plain text, no box */
+.cs-item {
+  flex-shrink: 0;
+  position: relative;
+  padding: .5rem 1.6rem;
+  font-family: var(--font-display);
+  font-size: clamp(.85rem, 1.7vw, 1rem);
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.85);
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  text-shadow: 0 1px 8px rgba(0,0,0,.8);
+  transition: color .25s, text-shadow .25s, transform .25s;
+}
+
+/* Thin divider between names */
+.cs-item::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1em;
+  width: 1px;
+  background: rgba(255,255,255,.15);
+}
+
+.cs-item:last-child::after { display: none; }
+
+.cs-item:hover {
+  color: #fff;
+  text-shadow:
+    0 0 14px rgba(34,211,238,.7),
+    0 0 28px rgba(34,211,238,.35);
+  transform: translateY(-1px);
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 991px) {
+  .clients-section { height: auto; min-height: 580px; }
+
+  .cs-content { gap: 1.5rem; padding: 2.5rem 1.5rem; }
+
+  .cs-stats {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .cs-stats__item {
+    min-width: 110px;
+    padding: .9rem 1.4rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .clients-section { min-height: 600px; }
+
+  .cs-headline__title {
+    font-size: 1.7rem;
+    letter-spacing: -.02em;
+  }
+
+  .cs-stats__item {
+    min-width: 50%;
+    flex: 1 1 50%;
+  }
+
+  .cs-stats__item::after { display: none; }
+
+  .cs-logos {
+    max-width: 100%;
+  }
+
+  .cs-item {
+    font-size: .8rem;
+    padding: .45rem 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cs-bg__img,
+  .cs-logos,
+  .cs-headline__dot { animation: none; }
+  .cs-bg__img { transform: scale(1.03); }
+}

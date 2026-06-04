@@ -1,0 +1,479 @@
+/* ==========================================================================
+   NexusIT — Animation Stylesheet
+   ========================================================================== */
+
+/* ---------- Reveal Utilities ---------- */
+.reveal-up,
+.reveal-down,
+.reveal-left,
+.reveal-right,
+.reveal-scale,
+.reveal-fade {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.reveal-up { transform: translateY(60px); }
+.reveal-down { transform: translateY(-60px); }
+.reveal-left { transform: translateX(-60px); }
+.reveal-right { transform: translateX(60px); }
+.reveal-scale { transform: scale(0.9); }
+
+.reveal-up.revealed,
+.reveal-down.revealed,
+.reveal-left.revealed,
+.reveal-right.revealed,
+.reveal-scale.revealed,
+.reveal-fade.revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* Split text chars */
+.split-char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.split-char.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Gradient Animation ---------- */
+.animated-gradient {
+  background-size: 200% 200%;
+  animation: gradientShift 6s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: var(--gradient-primary);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.gradient-border:hover::before {
+  opacity: 1;
+}
+
+/* ---------- Floating Animation ---------- */
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.float-delay-1 { animation-delay: -1s; }
+.float-delay-2 { animation-delay: -2s; }
+.float-delay-3 { animation-delay: -3s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* ---------- Glow Pulse ---------- */
+.glow-pulse {
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(var(--neon-purple-rgb), 0.2); }
+  50% { box-shadow: 0 0 40px rgba(var(--neon-magenta-rgb), 0.45); }
+}
+
+/* ---------- Neon Text ---------- */
+.neon-text {
+  color: var(--neon-cyan);
+  text-shadow:
+    0 0 10px rgba(var(--neon-cyan-rgb), 0.55),
+    0 0 20px rgba(var(--neon-cyan-rgb), 0.35),
+    0 0 36px rgba(var(--neon-magenta-rgb), 0.25);
+}
+
+/* ---------- Marquee ---------- */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-animate {
+  animation: marquee 30s linear infinite;
+}
+
+.marquee-animate:hover {
+  animation-play-state: paused;
+}
+
+/* ---------- Shimmer ---------- */
+.shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 60%
+  );
+  transform: translateX(-100%);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  100% { transform: translateX(100%); }
+}
+
+/* ---------- Magnetic Button Ripple ---------- */
+.btn-magnetic::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.3s;
+}
+
+.btn-magnetic:active::after {
+  transform: scale(1);
+  opacity: 1;
+  transition: transform 0s, opacity 0s;
+}
+
+/* ---------- 3D Tilt ---------- */
+.tilt-card-inner {
+  transition: transform 0.1s ease-out;
+  transform-style: preserve-3d;
+}
+
+.tilt-card-inner > * {
+  transform: translateZ(20px);
+}
+
+/* ---------- Page Transition ---------- */
+.page-transition {
+  position: fixed;
+  inset: 0;
+  z-index: 99997;
+  background: var(--color-bg);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  pointer-events: none;
+}
+
+.page-transition.active {
+  animation: pageTransition 0.8s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+@keyframes pageTransition {
+  0% { transform: scaleY(0); transform-origin: bottom; }
+  50% { transform: scaleY(1); transform-origin: bottom; }
+  51% { transform-origin: top; }
+  100% { transform: scaleY(0); transform-origin: top; }
+}
+
+/* ---------- SVG Morph ---------- */
+.morph-svg {
+  width: 80px;
+  height: 80px;
+}
+
+.morph-path {
+  transition: d 0.6s ease;
+}
+
+/* ---------- Parallax Layers ---------- */
+.parallax-layer {
+  will-change: transform;
+}
+
+/* ---------- Stagger Children ---------- */
+.stagger-item {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* ---------- Hero Background Motion ---------- */
+@keyframes heroKenBurns {
+  0% { transform: scale(1.06) translate3d(0, 0, 0); }
+  100% { transform: scale(1.16) translate3d(-1.5%, -1%, 0); }
+}
+
+@keyframes heroAuroraDrift {
+  0% { transform: translate3d(-3%, -2%, 0) rotate(0deg); }
+  100% { transform: translate3d(4%, 3%, 0) rotate(8deg); }
+}
+
+@keyframes heroGridDrift {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(64px, 64px, 0); }
+}
+
+@keyframes heroScanline {
+  0% { background-position: 0 -120%; }
+  100% { background-position: 0 220%; }
+}
+
+@keyframes heroHexDrift {
+  0% { background-position: 0 0; }
+  100% { background-position: 56px 100px; }
+}
+
+@keyframes heroOrbitSpin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes heroOrbitDash {
+  to { stroke-dashoffset: -60; }
+}
+
+@keyframes heroSignalRipple {
+  0% {
+    width: 12px;
+    height: 12px;
+    opacity: 0.8;
+  }
+  100% {
+    width: 120px;
+    height: 120px;
+    opacity: 0;
+  }
+}
+
+@keyframes heroStatGlow {
+  0%, 100% { text-shadow: 0 0 20px rgba(var(--neon-magenta-rgb), 0.25); }
+  50% { text-shadow: 0 0 28px rgba(var(--neon-cyan-rgb), 0.5); }
+}
+
+.shooting-star {
+  position: absolute;
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.9), transparent);
+  border-radius: 2px;
+  opacity: 0;
+  animation: shootingStar 6s ease-in infinite;
+  transform: rotate(-18deg);
+}
+
+@keyframes shootingStar {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) rotate(-18deg);
+  }
+  8% { opacity: 1; }
+  25% {
+    opacity: 0;
+    transform: translate3d(280px, 140px, 0) rotate(-18deg);
+  }
+  100% { opacity: 0; }
+}
+
+/* ---------- Hero Particles ---------- */
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--color-accent);
+  border-radius: 50%;
+  opacity: 0.35;
+  box-shadow: 0 0 12px rgba(34, 211, 238, 0.6);
+}
+
+.particle--lg {
+  width: 6px;
+  height: 6px;
+  opacity: 0.5;
+}
+
+/* ---------- Service Card Hover Glow ---------- */
+.service-card .glow-orb {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(var(--card-neon-rgb, var(--neon-purple-rgb)), 0.35) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  transform: translate(-50%, -50%);
+}
+
+.service-card:hover .glow-orb {
+  opacity: 1;
+}
+
+/* ---------- Counter Animation ---------- */
+.stat-number.counting {
+  display: inline-block;
+}
+
+/* ---------- AOS Overrides ---------- */
+[data-aos] {
+  pointer-events: auto;
+}
+
+/* ---------- Line Draw SVG ---------- */
+.line-draw {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+.line-draw.drawn {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 2s ease;
+}
+
+/* ---------- Infinite Rotate ---------- */
+.spin-slow {
+  animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ---------- Blob Background ---------- */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+  animation: blobMove 12s ease-in-out infinite;
+}
+
+.blob-1 {
+  width: 400px;
+  height: 400px;
+  background: var(--color-primary);
+  top: 10%;
+  left: -10%;
+}
+
+.blob-2 {
+  width: 300px;
+  height: 300px;
+  background: var(--color-accent-2);
+  bottom: 20%;
+  right: -5%;
+  animation-delay: -4s;
+}
+
+@keyframes blobMove {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -30px) scale(1.05); }
+  66% { transform: translate(-20px, 20px) scale(0.95); }
+}
+
+/* ---------- Mobile Menu Animation ---------- */
+.mobile-menu-panel {
+  transform: translateX(100%);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  visibility: hidden;
+}
+
+.mobile-menu.active .mobile-menu-panel {
+  transform: translateX(0);
+  visibility: visible;
+}
+
+.mobile-nav-link {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.mobile-menu.active .mobile-nav-link,
+.mobile-nav-link.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ---------- Reduced Motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .marquee-animate {
+    animation: none;
+  }
+
+  .hero-bg-img,
+  .hero-aurora,
+  .hero-grid-lines,
+  .hero-scanline,
+  .shooting-star {
+    animation: none !important;
+  }
+
+  .hero-canvas,
+  .hero-network,
+  .hero-data-stream,
+  .hero-orbits,
+  .hero-signals,
+  .hero-hex-mesh,
+  .hero-shooting-stars,
+  .hero-particles {
+    display: none !important;
+  }
+
+  .hero-stat strong {
+    animation: none !important;
+    text-shadow: none !important;
+  }
+
+  .text-gradient,
+  .text-gradient-digital,
+  .text-gradient-warm {
+    animation: none !important;
+  }
+
+  .stat-card.glow-pulse {
+    animation: none !important;
+  }
+
+  .reveal-up,
+  .reveal-down,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale,
+  .mobile-nav-link {
+    opacity: 1;
+    transform: none;
+  }
+
+  .mobile-menu-panel {
+    transform: none;
+    visibility: visible;
+  }
+}

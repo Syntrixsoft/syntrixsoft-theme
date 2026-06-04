@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" role="img" aria-label="SyntrixSoft">
+  <!-- Rounded-square border -->
+  <rect x="4" y="4" width="92" height="92" rx="21" stroke="#000" stroke-width="2.5" fill="none"/>
+  <!-- S glyph — solid black -->
+  <path
+    d="M 66,33 C 66,23 34,23 34,33 C 34,43 66,53 66,63 C 66,73 34,73 34,63"
+    stroke="#000" stroke-width="11" stroke-linecap="round" fill="none"/>
+</svg>

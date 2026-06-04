@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SyntrixSoft services — web, mobile, cloud, AI, DevOps, and UI/UX engineering for enterprise teams.">
+  <title>Services — SyntrixSoft</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="./assets/icons/site.webmanifest">
+  <link rel="mask-icon" href="./assets/icons/safari-pinned-tab.svg" color="#00f0ff">
+  <meta name="theme-color" content="#010102">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/animation.css">
+  <link rel="stylesheet" href="./assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Page Transition Start -->
+  <div class="page-transition" aria-hidden="true"></div>
+  <!-- Page Transition End -->
+
+  <!-- Preloader Start -->
+  <div id="page-loader" role="status" aria-label="Loading page">
+    <div class="loader-inner">
+      <div class="loader-logo">Syntrix<span>Soft</span></div>
+      <div class="loader-bar"><div class="loader-progress"></div></div>
+      <p class="loader-percent">0%</p>
+    </div>
+  </div>
+  <!-- Preloader End -->
+
+  <!-- Custom Cursor Start -->
+  <div class="custom-cursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+  </div>
+  <!-- Custom Cursor End -->
+
+  <!-- Navbar Start -->
+  <header class="navbar scrolled" role="banner">
+    <div class="container navbar-inner">
+      <a href="index.html" class="navbar-brand" aria-label="SyntrixSoft Home">Syntrix<span>Soft</span></a>
+      <nav class="navbar-nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+        <div class="nav-item has-mega">
+          <a href="services.html" class="nav-link active">Services <i class="bi bi-chevron-down" aria-hidden="true"></i></a>
+          <div class="mega-menu" role="menu" aria-label="Services menu">
+            <div class="mega-menu-inner">
+              <div class="mega-menu-head">
+                <span class="mega-menu-label">Our Services</span>
+                <a href="services.html" class="mega-menu-all">View all <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+              </div>
+              <div class="mega-grid">
+                <a href="service-web.html" class="mega-item" role="menuitem">
+                  <span class="mega-item-icon"><i class="bi bi-code-slash" aria-hidden="true"></i></span>
+                  <span class="mega-item-body"><h4>Web Development</h4><p>Scalable web applications</p></span>
+                </a>
+                <a href="service-mobile.html" class="mega-item" role="menuitem">
+                  <span class="mega-item-icon"><i class="bi bi-phone" aria-hidden="true"></i></span>
+                  <span class="mega-item-body"><h4>Mobile Apps</h4><p>iOS &amp; Android solutions</p></span>
+                </a>
+                <a href="service-cloud.html" class="mega-item" role="menuitem">
+                  <span class="mega-item-icon"><i class="bi bi-cloud" aria-hidden="true"></i></span>
+                  <span class="mega-item-body"><h4>Cloud Solutions</h4><p>AWS, Azure, GCP</p></span>
+                </a>
+                <a href="service-ai.html" class="mega-item" role="menuitem">
+                  <span class="mega-item-icon"><i class="bi bi-cpu" aria-hidden="true"></i></span>
+                  <span class="mega-item-body"><h4>AI Solutions</h4><p>Machine learning &amp; NLP</p></span>
+                </a>
+                <a href="service-devops.html" class="mega-item" role="menuitem">
+                  <span class="mega-item-icon"><i class="bi bi-gear-wide-connected" aria-hidden="true"></i></span>
+                  <span class="mega-item-body"><h4>DevOps</h4><p>CI/CD &amp; automation</p></span>
+                </a>
+                <a href="service-uiux.html" class="mega-item" role="menuitem">
+                  <span class="mega-item-icon"><i class="bi bi-palette" aria-hidden="true"></i></span>
+                  <span class="mega-item-body"><h4>UI/UX Design</h4><p>User-centered design</p></span>
+                </a>
+                <a href="service-salesforce.html" class="mega-item" role="menuitem">
+                  <span class="mega-item-icon"><i class="bi bi-cloud-check" aria-hidden="true"></i></span>
+                  <span class="mega-item-body"><h4>Salesforce</h4><p>CRM, Sales Cloud &amp; integrations</p></span>
+                </a>
+                <a href="service-data.html" class="mega-item" role="menuitem">
+                  <span class="mega-item-icon"><i class="bi bi-graph-up-arrow" aria-hidden="true"></i></span>
+                  <span class="mega-item-body"><h4>Data Analytics</h4><p>BI &amp; dashboards</p></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item"><a href="about.html" class="nav-link">About</a></div>
+        <div class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></div>
+        <div class="nav-item"><a href="blog.html" class="nav-link">Blog</a></div>
+        <div class="nav-item"><a href="careers.html" class="nav-link">Careers</a></div>
+        <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+      </nav>
+      <div class="navbar-actions">
+        <button class="icon-btn search-toggle" type="button" aria-label="Open search"><i class="bi bi-search" aria-hidden="true"></i></button>
+        <button class="icon-btn theme-toggle" type="button" aria-label="Toggle theme"><i class="bi bi-moon-fill icon-moon" aria-hidden="true"></i><i class="bi bi-sun-fill icon-sun" aria-hidden="true"></i></button>
+        <a href="contact.html" class="btn-primary btn-magnetic d-none d-lg-inline-flex">Get Started <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+        <button class="navbar-toggler" type="button" aria-label="Toggle mobile menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <!-- Navbar End -->
+
+  <!-- Mobile Menu Start -->
+  <div class="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu-backdrop"></div>
+    <div class="mobile-menu-panel" id="mobile-menu-panel">
+      <nav class="mobile-nav" aria-label="Mobile navigation">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="about.html" class="mobile-nav-link">About</a>
+        <a href="services.html" class="mobile-nav-link active">Services</a>
+        <a href="portfolio.html" class="mobile-nav-link">Portfolio</a>
+        <a href="blog.html" class="mobile-nav-link">Blog</a>
+        <a href="careers.html" class="mobile-nav-link">Careers</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+      </nav>
+      <a href="contact.html" class="btn-primary mobile-menu-cta">Get Started</a>
+    </div>
+  </div>
+  <!-- Mobile Menu End -->
+
+  <main id="main-content">
+
+    <!-- Section Start -->
+    <section class="page-hero" aria-labelledby="services-hero-title">
+      <div class="blob blob-1" aria-hidden="true"></div>
+      <div class="container">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="sep" aria-hidden="true">/</span>
+          <span aria-current="page">Services</span>
+        </nav>
+        <h1 class="page-hero-title" id="services-hero-title">Our <span class="text-gradient">Services</span></h1>
+        <p class="page-hero-desc">End-to-end delivery from product design to production operations — built for scale, security, and speed.</p>
+      </div>
+    </section>
+    <!-- Section End -->
+
+    <!-- Services Overview Start -->
+    <section class="section section-compact" aria-label="Browse all services">
+      <div class="container">
+        <div class="services-overview-grid">
+          <a href="service-web.html" class="glass-card service-overview-card">
+            <i class="bi bi-code-slash" aria-hidden="true"></i>
+            <h3>Web Development</h3>
+          </a>
+          <a href="service-mobile.html" class="glass-card service-overview-card">
+            <i class="bi bi-phone" aria-hidden="true"></i>
+            <h3>Mobile Apps</h3>
+          </a>
+          <a href="service-cloud.html" class="glass-card service-overview-card">
+            <i class="bi bi-cloud" aria-hidden="true"></i>
+            <h3>Cloud Solutions</h3>
+          </a>
+          <a href="service-ai.html" class="glass-card service-overview-card">
+            <i class="bi bi-cpu" aria-hidden="true"></i>
+            <h3>AI Solutions</h3>
+          </a>
+          <a href="service-devops.html" class="glass-card service-overview-card">
+            <i class="bi bi-gear-wide-connected" aria-hidden="true"></i>
+            <h3>DevOps</h3>
+          </a>
+          <a href="service-uiux.html" class="glass-card service-overview-card">
+            <i class="bi bi-palette" aria-hidden="true"></i>
+            <h3>UI/UX Design</h3>
+          </a>
+          <a href="service-salesforce.html" class="glass-card service-overview-card">
+            <i class="bi bi-cloud-check" aria-hidden="true"></i>
+            <h3>Salesforce</h3>
+          </a>
+          <a href="service-data.html" class="glass-card service-overview-card">
+            <i class="bi bi-graph-up-arrow" aria-hidden="true"></i>
+            <h3>Data Analytics</h3>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Services Overview End -->
+
+    <!-- Section Start -->
+    <section class="section service-detail" id="web" aria-labelledby="web-heading">
+      <div class="container">
+        <div class="service-detail-grid">
+          <article class="glass-card tilt-card gradient-border" data-aos="fade-up">
+            <div class="tilt-card-inner">
+              <div class="glow-orb" aria-hidden="true"></div>
+              <div class="service-icon"><i class="bi bi-code-slash" aria-hidden="true"></i></div>
+              <h2 class="section-title" id="web-heading">Web <span class="text-gradient">Development</span></h2>
+              <p class="section-desc mb-0">Progressive web apps, design systems, and high-traffic platforms with observability baked in.</p>
+              <ul class="service-features list-unstyled">
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> React, Next.js, and modern TypeScript stacks</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Accessibility, performance budgets, and SEO</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> SSR, edge caching, and API gateways</li>
+              </ul>
+              <a href="service-web.html" class="service-link mt-3">View full service <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+          <div class="service-detail-visual glass-card" data-aos="fade-up" data-aos-delay="80">
+            <img src="./assets/images/web-development.jpg" alt="Developer working on web application code" width="900" height="675" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section End -->
+
+    <!-- Section Start -->
+    <section class="section section-alt service-detail" id="mobile" aria-labelledby="mobile-heading">
+      <div class="container">
+        <div class="service-detail-grid reverse">
+          <article class="glass-card tilt-card gradient-border" data-aos="fade-up">
+            <div class="tilt-card-inner">
+              <div class="glow-orb" aria-hidden="true"></div>
+              <div class="service-icon"><i class="bi bi-phone" aria-hidden="true"></i></div>
+              <h2 class="section-title" id="mobile-heading">Mobile <span class="text-gradient">Engineering</span></h2>
+              <p class="section-desc mb-0">Ship native-quality experiences on iOS and Android with shared business logic where it makes sense.</p>
+              <ul class="service-features list-unstyled">
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Swift, Kotlin, and cross-platform options</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Offline-first data and secure storage</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Push, deep links, and analytics pipelines</li>
+              </ul>
+              <a href="service-mobile.html" class="service-link mt-3">View full service <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+          <div class="service-detail-visual glass-card" data-aos="fade-up" data-aos-delay="80">
+            <img src="./assets/images/mobile-app.jpg" alt="Mobile app design on smartphone" width="900" height="675" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section End -->
+
+    <!-- Section Start -->
+    <section class="section service-detail" id="cloud" aria-labelledby="cloud-heading">
+      <div class="container">
+        <div class="service-detail-grid">
+          <article class="glass-card tilt-card gradient-border" data-aos="fade-up">
+            <div class="tilt-card-inner">
+              <div class="glow-orb" aria-hidden="true"></div>
+              <div class="service-icon"><i class="bi bi-cloud" aria-hidden="true"></i></div>
+              <h2 class="section-title" id="cloud-heading">Cloud <span class="text-gradient">Solutions</span></h2>
+              <p class="section-desc mb-0">Landing zones, modernization, and FinOps-aware architectures across AWS, Azure, and GCP.</p>
+              <ul class="service-features list-unstyled">
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Well-Architected reviews and guardrails</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Kubernetes, serverless, and hybrid patterns</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> DR, backup, and compliance automation</li>
+              </ul>
+              <a href="service-cloud.html" class="service-link mt-3">View full service <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+          <div class="service-detail-visual glass-card" data-aos="fade-up" data-aos-delay="80">
+            <img src="./assets/images/cloud-infrastructure.jpg" alt="Cloud infrastructure abstract visualization" width="900" height="675" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section End -->
+
+    <!-- Section Start -->
+    <section class="section section-alt service-detail" id="ai" aria-labelledby="ai-heading">
+      <div class="container">
+        <div class="service-detail-grid reverse">
+          <article class="glass-card tilt-card gradient-border" data-aos="fade-up">
+            <div class="tilt-card-inner">
+              <div class="glow-orb" aria-hidden="true"></div>
+              <div class="service-icon"><i class="bi bi-cpu" aria-hidden="true"></i></div>
+              <h2 class="section-title" id="ai-heading">AI &amp; <span class="text-gradient">Data</span></h2>
+              <p class="section-desc mb-0">Responsible AI from discovery to MLOps — models that deliver measurable business outcomes.</p>
+              <ul class="service-features list-unstyled">
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Retrieval, agents, and workflow automation</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Data pipelines and feature stores</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Evaluation, monitoring, and drift detection</li>
+              </ul>
+              <a href="service-ai.html" class="service-link mt-3">View full service <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+          <div class="service-detail-visual glass-card" data-aos="fade-up" data-aos-delay="80">
+            <img src="./assets/images/ai-neural-network.jpg" alt="Artificial intelligence neural network concept" width="900" height="675" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section End -->
+
+    <!-- Section Start -->
+    <section class="section service-detail" id="devops" aria-labelledby="devops-heading">
+      <div class="container">
+        <div class="service-detail-grid">
+          <article class="glass-card tilt-card gradient-border" data-aos="fade-up">
+            <div class="tilt-card-inner">
+              <div class="glow-orb" aria-hidden="true"></div>
+              <div class="service-icon"><i class="bi bi-gear-wide-connected" aria-hidden="true"></i></div>
+              <h2 class="section-title" id="devops-heading">DevOps &amp; <span class="text-gradient">SRE</span></h2>
+              <p class="section-desc mb-0">Cadence, automation, and telemetry so your teams ship safely and sleep better.</p>
+              <ul class="service-features list-unstyled">
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> GitOps, CI/CD, and progressive delivery</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> IaC, policy-as-code, and secrets management</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> SLOs, incident response, and runbooks</li>
+              </ul>
+              <a href="service-devops.html" class="service-link mt-3">View full service <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+          <div class="service-detail-visual glass-card" data-aos="fade-up" data-aos-delay="80">
+            <img src="./assets/images/data-platform.jpg" alt="Server room and network operations" width="900" height="675" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section End -->
+
+    <!-- Section Start -->
+    <section class="section section-alt service-detail" id="uiux" aria-labelledby="uiux-heading">
+      <div class="container">
+        <div class="service-detail-grid reverse">
+          <article class="glass-card tilt-card gradient-border" data-aos="fade-up">
+            <div class="tilt-card-inner">
+              <div class="glow-orb" aria-hidden="true"></div>
+              <div class="service-icon"><i class="bi bi-palette" aria-hidden="true"></i></div>
+              <h2 class="section-title" id="uiux-heading">UI / <span class="text-gradient">UX</span></h2>
+              <p class="section-desc mb-0">Research-led product design with systems that scale across web, mobile, and brand touchpoints.</p>
+              <ul class="service-features list-unstyled">
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Discovery, prototyping, and usability testing</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Design tokens and component libraries</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Motion, content design, and localization</li>
+              </ul>
+              <a href="service-uiux.html" class="service-link mt-3">View full service <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+          <div class="service-detail-visual glass-card" data-aos="fade-up" data-aos-delay="80">
+            <img src="./assets/images/uiux-design.jpg" alt="UI and UX design workspace" width="900" height="675" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section End -->
+
+    <!-- Section Start -->
+    <section class="section service-detail" id="salesforce" aria-labelledby="salesforce-heading">
+      <div class="container">
+        <div class="service-detail-grid">
+          <article class="glass-card tilt-card gradient-border">
+            <div class="tilt-card-inner">
+              <div class="glow-orb" aria-hidden="true"></div>
+              <div class="service-icon"><i class="bi bi-cloud-check" aria-hidden="true"></i></div>
+              <h2 class="section-title" id="salesforce-heading">Sales<span class="text-gradient">force</span></h2>
+              <p class="section-desc mb-0">Implement, integrate, and optimize Salesforce for sales, service, and marketing teams with measurable pipeline impact.</p>
+              <ul class="service-features list-unstyled">
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Sales Cloud and Service Cloud implementation</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Apex, LWC, Flow, and MuleSoft integrations</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Data migration, adoption, and admin support</li>
+              </ul>
+              <a href="service-salesforce.html" class="service-link mt-3">View full service <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+          <div class="service-detail-visual glass-card">
+            <img src="./assets/images/sales-team-crm.jpg" alt="Sales team collaborating with CRM dashboards" width="900" height="675" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section End -->
+
+    <!-- Section Start -->
+    <section class="section section-alt service-detail" id="data" aria-labelledby="data-heading">
+      <div class="container">
+        <div class="service-detail-grid reverse">
+          <article class="glass-card tilt-card gradient-border">
+            <div class="tilt-card-inner">
+              <div class="glow-orb" aria-hidden="true"></div>
+              <div class="service-icon"><i class="bi bi-graph-up-arrow" aria-hidden="true"></i></div>
+              <h2 class="section-title" id="data-heading">Data <span class="text-gradient">Analytics</span></h2>
+              <p class="section-desc mb-0">Turn raw data into actionable insights with modern warehouses, pipelines, and executive dashboards.</p>
+              <ul class="service-features list-unstyled">
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Snowflake, BigQuery, and lakehouse architectures</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> ETL/ELT pipelines and real-time streaming</li>
+                <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Power BI, Looker, and custom analytics portals</li>
+              </ul>
+              <a href="service-data.html" class="service-link mt-3">View full service <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+          <div class="service-detail-visual glass-card">
+            <img src="./assets/images/healthcare-analytics.jpg" alt="Data analytics dashboard visualization" width="900" height="675" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section End -->
+
+    <!-- Section Start -->
+    <section class="cta-section" aria-labelledby="services-cta-title">
+      <div class="container">
+        <div class="glass-card cta-box glow-pulse">
+          <div class="cta-content" data-aos="fade-up">
+            <h2 id="services-cta-title">Need a cross-functional <span class="text-gradient">squad</span>?</h2>
+            <p>Tell us about your roadmap — we will propose the right mix of engineering, design, and cloud expertise.</p>
+            <a href="contact.html" class="btn-primary btn-magnetic">Talk to our team <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section End -->
+
+  </main>
+
+  <!-- Footer Start -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="navbar-brand">Syntrix<span>Soft</span></a>
+          <p>Empowering enterprises with world-class technology solutions since 2014.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
+            <a href="#" aria-label="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="careers.html">Careers</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Services</h4><ul><li><a href="service-web.html">Web Development</a></li><li><a href="service-mobile.html">Mobile Apps</a></li><li><a href="service-cloud.html">Cloud Solutions</a></li><li><a href="service-ai.html">AI Solutions</a></li></ul></div>
+        <div class="footer-col"><h4>Newsletter</h4><p class="footer-newsletter-desc">Subscribe for tech insights and updates.</p><form class="footer-newsletter newsletter-form" aria-label="Newsletter signup"><input type="email" name="email" placeholder="Your email" required aria-label="Email"><button type="submit" class="btn-primary">Subscribe</button></form></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; <span id="footer-year">2026</span> SyntrixSoft. All rights reserved.</p><div><a href="privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms-conditions.html">Terms &amp; Conditions</a></div></div>
+    </div>
+  </footer>
+  <!-- Footer End -->
+
+  <!-- Search Popup Start -->
+  <div class="search-popup" role="dialog" aria-label="Search" aria-hidden="true">
+    <div class="search-popup-inner">
+      <form role="search" aria-label="Site search"><input type="search" placeholder="Search..." aria-label="Search query" autocomplete="off"><button type="button" class="search-close" aria-label="Close search"><i class="bi bi-x-lg" aria-hidden="true"></i></button></form>
+      <div class="search-suggestions"><h4>Popular Searches</h4><a href="services.html">Cloud Solutions</a><a href="service-ai.html">AI Development</a><a href="portfolio.html">Case Studies</a><a href="careers.html">Open Positions</a></div>
+    </div>
+  </div>
+  <!-- Search Popup End -->
+
+  <!-- Back to Top Start -->
+  <button class="back-to-top" type="button" aria-label="Back to top"><i class="bi bi-arrow-up" aria-hidden="true"></i></button>
+  <!-- Back to Top End -->
+
+  <!-- WhatsApp Float Start -->
+  <a href="https://wa.me/14155550100" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+  <!-- WhatsApp Float End -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/animation.js"></script>
+  <script src="./assets/js/page-hero-bg.js" defer></script>
+</body>
+</html>

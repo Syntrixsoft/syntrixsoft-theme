@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 80" fill="none" role="img" aria-label="SyntrixSoft Logo">
+  <defs>
+    <linearGradient id="gb" x1="0" y1="0" x2="80" y2="80" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="48%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <linearGradient id="gd" x1="0" y1="0" x2="80" y2="80" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0f0f22"/>
+      <stop offset="100%" stop-color="#040409"/>
+    </linearGradient>
+    <radialGradient id="ga" cx="48%" cy="38%" r="52%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gg" x1="100" y1="50" x2="380" y2="80" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <filter id="bl">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="cr">
+      <rect width="80" height="80" rx="19"/>
+    </clipPath>
+    <clipPath id="ca">
+      <rect width="420" height="80"/>
+    </clipPath>
+  </defs>
+
+  <!-- Dark background for the whole logo -->
+  <rect width="420" height="80" fill="#060610"/>
+
+  <!-- Icon background -->
+  <rect width="80" height="80" rx="19" fill="url(#gd)"/>
+  <rect width="80" height="80" rx="19" fill="url(#ga)" clip-path="url(#cr)"/>
+  <rect x="3" y="3" width="74" height="74" rx="16.5" stroke="url(#gb)" stroke-width="1.8" fill="none"/>
+
+  <!-- Corner pads -->
+  <circle cx="17" cy="17" r="2.5" fill="#22d3ee" opacity="0.9"/>
+  <circle cx="63" cy="17" r="2.5" fill="#a855f7" opacity="0.9"/>
+  <circle cx="63" cy="63" r="2.5" fill="#ec4899" opacity="0.9"/>
+  <circle cx="17" cy="63" r="2.5" fill="#ec4899" opacity="0.9"/>
+  <path d="M17 20V25 M20 17H25" stroke="#22d3ee" stroke-width="1" opacity="0.5" stroke-linecap="round"/>
+  <path d="M63 20V25 M60 17H55" stroke="#a855f7" stroke-width="1" opacity="0.5" stroke-linecap="round"/>
+  <path d="M63 60V55 M60 63H55" stroke="#ec4899" stroke-width="1" opacity="0.5" stroke-linecap="round"/>
+  <path d="M17 60V55 M20 63H25" stroke="#ec4899" stroke-width="1" opacity="0.5" stroke-linecap="round"/>
+
+  <!-- S glyph bloom -->
+  <path d="M52,26 C52,18 27,18 27,26 C27,34 52,42 52,50 C52,58 27,58 27,50"
+        stroke="url(#gb)" stroke-width="12" stroke-linecap="round" fill="none"
+        opacity="0.25" filter="url(#bl)"/>
+  <!-- S glyph crisp -->
+  <path d="M52,26 C52,18 27,18 27,26 C27,34 52,42 52,50 C52,58 27,58 27,50"
+        stroke="url(#gb)" stroke-width="8.5" stroke-linecap="round" fill="none"/>
+  <!-- Centre dot -->
+  <circle cx="39.5" cy="39" r="2.2" fill="#fff" opacity="0.9"/>
+
+  <!-- Wordmark -->
+  <text x="97" y="47"
+        font-family="Arial Black, Arial, sans-serif"
+        font-size="33" font-weight="900" fill="#f0f4ff">Syntrix<tspan fill="#a855f7">Soft</tspan></text>
+
+  <!-- Tagline -->
+  <text x="99" y="64"
+        font-family="Arial, sans-serif" font-size="11" font-weight="600"
+        fill="url(#gg)" letter-spacing="2" opacity="0.90">NEXT GEN SOFTWARE</text>
+
+  <!-- Accent line -->
+  <line x1="99" y1="69" x2="345" y2="69" stroke="url(#gb)" stroke-width="0.8" opacity="0.3"/>
+</svg>

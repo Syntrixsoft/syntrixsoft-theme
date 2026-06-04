@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexusIT — Transforming Business Through Digital Innovation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Space Grotesk', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ──────────────────────────────────────────────────────────
+     NAV
+────────────────────────────────────────────────────────── -->
+<nav class="site-nav" id="site-nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <span class="logo-gem">N</span>
+      <span class="logo-word">Nexus<strong>IT</strong></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#">Services</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <a href="#" class="nav-btn">Get Started →</a>
+  </div>
+</nav>
+
+<!-- ──────────────────────────────────────────────────────────
+     HERO
+────────────────────────────────────────────────────────── -->
+<section id="hero">
+
+  <!-- === Canvas stack (background layers) === -->
+
+  <!-- Layer 1 – City skyline (drawn by JS) -->
+  <canvas id="city-canvas" class="bg-layer"></canvas>
+
+  <!-- Layer 2 – 5G network / connection lines (drawn by JS) -->
+  <canvas id="net-canvas"  class="bg-layer"></canvas>
+
+  <!-- Layer 3 – Three.js floating particle cloud -->
+  <div id="three-mount"    class="bg-layer no-ptr"></div>
+
+  <!-- === CSS overlay layers === -->
+  <div class="grid-overlay  bg-layer no-ptr"></div>
+  <div class="scanlines     bg-layer no-ptr"></div>
+  <div class="left-fog      bg-layer no-ptr"></div>
+  <div class="vignette      bg-layer no-ptr"></div>
+
+  <!-- === Foreground content === -->
+  <div class="hero-shell">
+
+    <!-- LEFT — text -->
+    <div class="hero-left">
+
+      <div class="badge" id="badge">
+        <span class="badge-dot"></span>
+        Next Generation Technology
+      </div>
+
+      <h1 class="hero-h1" id="hero-h1">
+        <span class="ln-wrap"><span class="ln">Transforming</span></span>
+        <span class="ln-wrap"><span class="ln ln-grad">Business Through</span></span>
+        <span class="ln-wrap"><span class="ln">Digital Innovation</span></span>
+      </h1>
+
+      <p class="hero-para" id="hero-para">
+        Enterprise AI, Cloud Infrastructure &amp; Full-Stack Software engineered for
+        scale — delivering measurable ROI through intelligent digital transformation
+        that keeps you ahead of tomorrow.
+      </p>
+
+      <div class="cta-row" id="cta-row">
+        <a href="#" class="btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          Start Your Project
+        </a>
+        <a href="#" class="btn-ghost">
+          View Services <span class="ghost-arrow">↗</span>
+        </a>
+      </div>
+
+      <div class="kpi-row" id="kpi-row">
+        <div class="kpi">
+          <b class="kv" data-target="500">0</b><b class="kv">+</b>
+          <span>Projects Delivered</span>
+        </div>
+        <div class="kpi-sep"></div>
+        <div class="kpi">
+          <b class="kv" data-target="12">0</b><b class="kv">+</b>
+          <span>Years Experience</span>
+        </div>
+        <div class="kpi-sep"></div>
+        <div class="kpi">
+          <b class="kv">99.9<small>%</small></b>
+          <span>Uptime SLA</span>
+        </div>
+      </div>
+
+    </div><!-- /hero-left -->
+
+    <!-- RIGHT — glass cards -->
+    <div class="hero-right" id="hero-right">
+
+      <!-- Card A: 5G Network -->
+      <div class="gc gc-a" data-tilt>
+        <div class="gc-head">
+          <div class="gc-icon gi-cyan">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.14 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"/>
+            </svg>
+          </div>
+          <div>
+            <p class="gc-name">5G Network</p>
+            <p class="gc-stat s-on">● Live</p>
+          </div>
+          <div class="live-chip">LIVE</div>
+        </div>
+        <div class="gc-num"><span id="speed-val">5.8</span> <span class="gc-unit">Gbps</span></div>
+        <div class="prog-wrap"><div class="prog" style="--pw:82%"></div></div>
+        <div class="sig-bars">
+          <i class="sb s1"></i><i class="sb s2"></i><i class="sb s3"></i><i class="sb s4"></i><i class="sb s5"></i>
+        </div>
+      </div>
+
+      <!-- Card B: AI Engine -->
+      <div class="gc gc-b" data-tilt>
+        <div class="gc-head">
+          <div class="gc-icon gi-purple">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+            </svg>
+          </div>
+          <div>
+            <p class="gc-name">AI Engine</p>
+            <p class="gc-stat s-on">● Processing</p>
+          </div>
+        </div>
+        <canvas id="wave-cvs" width="230" height="50" class="gc-wave"></canvas>
+        <div class="gc-foot">
+          <span class="chip chip-p">Neural Net</span>
+          <span class="gc-fn" id="ai-val">2.4M</span>
+          <span class="gc-fl">ops/sec</span>
+        </div>
+      </div>
+
+      <!-- Card C: Cloud -->
+      <div class="gc gc-c" data-tilt>
+        <div class="gc-head">
+          <div class="gc-icon gi-blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+            </svg>
+          </div>
+          <div>
+            <p class="gc-name">Cloud Nodes</p>
+            <p class="gc-stat s-on">● All Healthy</p>
+          </div>
+        </div>
+        <div class="dot-grid" id="dot-grid"></div>
+        <div class="gc-foot">
+          <span class="gc-fn lg" id="node-cnt">142</span>
+          <span class="gc-fl">active nodes</span>
+        </div>
+      </div>
+
+      <!-- Card D: Latency -->
+      <div class="gc gc-d" data-tilt>
+        <div class="gc-head">
+          <div class="gc-icon gi-green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <div>
+            <p class="gc-name">Latency</p>
+            <p class="gc-stat s-on">● Optimal</p>
+          </div>
+        </div>
+        <div class="gc-num"><span>1.2</span> <span class="gc-unit">ms</span></div>
+        <div class="prog-wrap"><div class="prog prog-g" style="--pw:14%"></div></div>
+        <div class="lat-labels"><span>0ms</span><span>Excellent</span><span>100ms</span></div>
+      </div>
+
+    </div><!-- /hero-right -->
+
+  </div><!-- /hero-shell -->
+
+  <!-- Scroll indicator -->
+  <div class="scroll-ind" id="scroll-ind">
+    <div class="scroll-line"></div>
+    <span>SCROLL</span>
+  </div>
+
+</section>
+
+<!-- Brief teaser below hero -->
+<div style="height:160px;background:linear-gradient(180deg,#010b1d,#000510);display:flex;align-items:center;justify-content:center">
+  <p style="color:rgba(200,220,255,0.25);font-size:12px;letter-spacing:.18em;font-family:Space Grotesk,sans-serif">── EXPLORE OUR SOLUTIONS BELOW ──</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

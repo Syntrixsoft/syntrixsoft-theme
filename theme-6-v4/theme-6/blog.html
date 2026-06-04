@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SyntrixSoft blog — articles on AI, cloud, security, DevOps, and enterprise software.">
+  <title>Blog — SyntrixSoft</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="./assets/icons/site.webmanifest">
+  <link rel="mask-icon" href="./assets/icons/safari-pinned-tab.svg" color="#00f0ff">
+  <meta name="theme-color" content="#010102">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/animation.css">
+  <link rel="stylesheet" href="./assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Page Transition Start -->
+  <div class="page-transition" aria-hidden="true"></div>
+  <!-- Page Transition End -->
+
+  <!-- Preloader Start -->
+  <div id="page-loader" role="status" aria-label="Loading page">
+    <div class="loader-inner">
+      <div class="loader-logo">Syntrix<span>Soft</span></div>
+      <div class="loader-bar"><div class="loader-progress"></div></div>
+      <p class="loader-percent">0%</p>
+    </div>
+  </div>
+  <!-- Preloader End -->
+
+  <!-- Custom Cursor Start -->
+  <div class="custom-cursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+  </div>
+  <!-- Custom Cursor End -->
+
+  <!-- Navbar Start -->
+  <header class="navbar scrolled" role="banner">
+    <div class="container navbar-inner">
+      <a href="index.html" class="navbar-brand" aria-label="SyntrixSoft Home">Syntrix<span>Soft</span></a>
+      <nav class="navbar-nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+        <div class="nav-item has-mega">
+          <a href="services.html" class="nav-link">Services <i class="bi bi-chevron-down" aria-hidden="true"></i></a>
+          <div class="mega-menu" role="menu" aria-label="Services menu">
+            <div class="mega-menu-inner">
+              <div class="mega-menu-head">
+                <span class="mega-menu-label">Our Services</span>
+                <a href="services.html" class="mega-menu-all">View all <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+              </div>
+              <div class="mega-grid">
+                <a href="service-web.html" class="mega-item" role="menuitem">
+                  <span class="mega-item-icon"><i class="bi bi-code-slash" aria-hidden="true"></i></span>
+                  <span class="mega-item-body"><h4>Web Development</h4><p>Scalable web applications</p></span>
+                </a>
+                <a href="service-mobile.html" class="mega-item" role="menuitem">
+                  <span class="mega-item-icon"><i class="bi bi-phone" aria-hidden="true"></i></span>
+                  <span class="mega-item-body"><h4>Mobile Apps</h4><p>iOS &amp; Android solutions</p></span>
+                </a>
+                <a href="service-cloud.html" class="mega-item" role="menuitem">
+                  <span class="mega-item-icon"><i class="bi bi-cloud" aria-hidden="true"></i></span>
+                  <span class="mega-item-body"><h4>Cloud Solutions</h4><p>AWS, Azure, GCP</p></span>
+                </a>
+                <a href="service-ai.html" class="mega-item" role="menuitem">
+                  <span class="mega-item-icon"><i class="bi bi-cpu" aria-hidden="true"></i></span>
+                  <span class="mega-item-body"><h4>AI Solutions</h4><p>Machine learning &amp; NLP</p></span>
+                </a>
+                <a href="service-devops.html" class="mega-item" role="menuitem">
+                  <span class="mega-item-icon"><i class="bi bi-gear-wide-connected" aria-hidden="true"></i></span>
+                  <span class="mega-item-body"><h4>DevOps</h4><p>CI/CD &amp; automation</p></span>
+                </a>
+                <a href="service-uiux.html" class="mega-item" role="menuitem">
+                  <span class="mega-item-icon"><i class="bi bi-palette" aria-hidden="true"></i></span>
+                  <span class="mega-item-body"><h4>UI/UX Design</h4><p>User-centered design</p></span>
+                </a>
+                <a href="service-salesforce.html" class="mega-item" role="menuitem">
+                  <span class="mega-item-icon"><i class="bi bi-cloud-check" aria-hidden="true"></i></span>
+                  <span class="mega-item-body"><h4>Salesforce</h4><p>CRM, Sales Cloud &amp; integrations</p></span>
+                </a>
+                <a href="service-data.html" class="mega-item" role="menuitem">
+                  <span class="mega-item-icon"><i class="bi bi-graph-up-arrow" aria-hidden="true"></i></span>
+                  <span class="mega-item-body"><h4>Data Analytics</h4><p>BI &amp; dashboards</p></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item"><a href="about.html" class="nav-link">About</a></div>
+        <div class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></div>
+        <div class="nav-item"><a href="blog.html" class="nav-link active">Blog</a></div>
+        <div class="nav-item"><a href="careers.html" class="nav-link">Careers</a></div>
+        <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+      </nav>
+      <div class="navbar-actions">
+        <button class="icon-btn search-toggle" type="button" aria-label="Open search"><i class="bi bi-search" aria-hidden="true"></i></button>
+        <button class="icon-btn theme-toggle" type="button" aria-label="Toggle theme"><i class="bi bi-moon-fill icon-moon" aria-hidden="true"></i><i class="bi bi-sun-fill icon-sun" aria-hidden="true"></i></button>
+        <a href="contact.html" class="btn-primary btn-magnetic d-none d-lg-inline-flex">Get Started <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+        <button class="navbar-toggler" type="button" aria-label="Toggle mobile menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <!-- Navbar End -->
+
+  <!-- Mobile Menu Start -->
+  <div class="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu-backdrop"></div>
+    <div class="mobile-menu-panel" id="mobile-menu-panel">
+      <nav class="mobile-nav" aria-label="Mobile navigation">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="about.html" class="mobile-nav-link">About</a>
+        <a href="services.html" class="mobile-nav-link">Services</a>
+        <a href="portfolio.html" class="mobile-nav-link">Portfolio</a>
+        <a href="blog.html" class="mobile-nav-link active">Blog</a>
+        <a href="careers.html" class="mobile-nav-link">Careers</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+      </nav>
+      <a href="contact.html" class="btn-primary mobile-menu-cta">Get Started</a>
+    </div>
+  </div>
+  <!-- Mobile Menu End -->
+
+  <main id="main-content">
+
+    <!-- Section Start -->
+    <section class="page-hero" aria-labelledby="blog-hero-title">
+      <div class="blob blob-1" aria-hidden="true"></div>
+      <div class="container">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="sep" aria-hidden="true">/</span>
+          <span aria-current="page">Blog</span>
+        </nav>
+        <h1 class="page-hero-title" id="blog-hero-title">Insights &amp; <span class="text-gradient">ideas</span></h1>
+        <p class="page-hero-desc">Practical notes from our architects and engineers shipping in regulated, high-scale environments.</p>
+      </div>
+    </section>
+    <!-- Section End -->
+
+    <!-- Section Start -->
+    <section class="section" aria-labelledby="blog-archive-heading">
+      <div class="container">
+        <header class="section-header text-center" data-aos="fade-up">
+          <span class="section-label">Library</span>
+          <h2 class="section-title" id="blog-archive-heading">Latest <span class="text-gradient">articles</span></h2>
+        </header>
+        <div class="blog-filter-bar" role="group" aria-label="Filter articles">
+          <button type="button" class="blog-filter-btn filter-btn active" data-filter="all">All</button>
+          <button type="button" class="blog-filter-btn filter-btn" data-filter="ai">AI</button>
+          <button type="button" class="blog-filter-btn filter-btn" data-filter="cloud">Cloud</button>
+          <button type="button" class="blog-filter-btn filter-btn" data-filter="security">Security</button>
+          <button type="button" class="blog-filter-btn filter-btn" data-filter="devops">DevOps</button>
+        </div>
+        <div class="blog-grid">
+          <article class="blog-item glass-card blog-card" data-category="ai" data-aos="fade-up">
+            <a href="blog-detail.html">
+              <div class="blog-card-image">
+                <img src="./assets/images/ai-neural-network.jpg" alt="Abstract AI neural network visualization" width="800" height="500" loading="lazy">
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-meta"><span><i class="bi bi-calendar3" aria-hidden="true"></i> May 12, 2026</span><span>AI</span></div>
+                <h3>Operationalizing enterprise LLMs</h3>
+                <p class="blog-excerpt">Guardrails, eval harnesses, and release cadences that satisfy risk and compliance.</p>
+              </div>
+            </a>
+          </article>
+          <article class="blog-item glass-card blog-card" data-category="cloud" data-aos="fade-up" data-aos-delay="40">
+            <a href="blog-detail.html">
+              <div class="blog-card-image">
+                <img src="./assets/images/cloud-infrastructure.jpg" alt="Earth from space representing cloud infrastructure" width="800" height="500" loading="lazy">
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-meta"><span><i class="bi bi-calendar3" aria-hidden="true"></i> May 9, 2026</span><span>Cloud</span></div>
+                <h3>Designing safer landing zones</h3>
+                <p class="blog-excerpt">Account strategy, SSO, and guardrails teams actually follow.</p>
+              </div>
+            </a>
+          </article>
+          <article class="blog-item glass-card blog-card" data-category="security" data-aos="fade-up" data-aos-delay="80">
+            <a href="blog-detail.html">
+              <div class="blog-card-image">
+                <img src="./assets/images/security-mobile.jpg" alt="Security and mobile technology concept" width="800" height="500" loading="lazy">
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-meta"><span><i class="bi bi-calendar3" aria-hidden="true"></i> May 4, 2026</span><span>Security</span></div>
+                <h3>Measuring blast radius reduction</h3>
+                <p class="blog-excerpt">Beyond checklists — metrics your board will understand.</p>
+              </div>
+            </a>
+          </article>
+          <article class="blog-item glass-card blog-card" data-category="devops" data-aos="fade-up">
+            <a href="blog-detail.html">
+              <div class="blog-card-image">
+                <img src="./assets/images/git-devops-screen.jpg" alt="Git branch diagram on screen" width="800" height="500" loading="lazy">
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-meta"><span><i class="bi bi-calendar3" aria-hidden="true"></i> Apr 30, 2026</span><span>DevOps</span></div>
+                <h3>Canary releases without the drama</h3>
+                <p class="blog-excerpt">Feature flags, traffic shaping, and fast rollback drills.</p>
+              </div>
+            </a>
+          </article>
+          <article class="blog-item glass-card blog-card" data-category="ai" data-aos="fade-up" data-aos-delay="40">
+            <a href="blog-detail.html">
+              <div class="blog-card-image">
+                <img src="./assets/images/rag-robot-ai.jpg" alt="Robot and AI illustration" width="800" height="500" loading="lazy">
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-meta"><span><i class="bi bi-calendar3" aria-hidden="true"></i> Apr 22, 2026</span><span>AI</span></div>
+                <h3>RAG patterns that survive updates</h3>
+                <p class="blog-excerpt">Freshness loops, versioning, and source attribution at scale.</p>
+              </div>
+            </a>
+          </article>
+          <article class="blog-item glass-card blog-card" data-category="cloud" data-aos="fade-up" data-aos-delay="80">
+            <a href="blog-detail.html">
+              <div class="blog-card-image">
+                <img src="./assets/images/kubernetes-terminal.jpg" alt="Kubernetes cluster terminal output" width="800" height="500" loading="lazy">
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-meta"><span><i class="bi bi-calendar3" aria-hidden="true"></i> Apr 18, 2026</span><span>Cloud</span></div>
+                <h3>Kubernetes upgrades on a deadline</h3>
+                <p class="blog-excerpt">Planning windows, soaked clusters, and change records.</p>
+              </div>
+            </a>
+          </article>
+          <article class="blog-item glass-card blog-card" data-category="security" data-aos="fade-up">
+            <a href="blog-detail.html">
+              <div class="blog-card-image">
+                <img src="./assets/images/cybersecurity.jpg" alt="Developer reviewing code on monitor" width="800" height="500" loading="lazy">
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-meta"><span><i class="bi bi-calendar3" aria-hidden="true"></i> Apr 11, 2026</span><span>Security</span></div>
+                <h3>Threat modeling APIs you ship</h3>
+                <p class="blog-excerpt">Actors, OAuth flows, and abuse cases for public endpoints.</p>
+              </div>
+            </a>
+          </article>
+          <article class="blog-item glass-card blog-card" data-category="devops" data-aos="fade-up" data-aos-delay="40">
+            <a href="blog-detail.html">
+              <div class="blog-card-image">
+                <img src="./assets/images/server-racks.jpg" alt="Server racks in data center" width="800" height="500" loading="lazy">
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-meta"><span><i class="bi bi-calendar3" aria-hidden="true"></i> Apr 2, 2026</span><span>DevOps</span></div>
+                <h3>Incident reviews people want to attend</h3>
+                <p class="blog-excerpt">Blame-aware facilitation and action tracking that sticks.</p>
+              </div>
+            </a>
+          </article>
+          <article class="blog-item glass-card blog-card" data-category="ai" data-aos="fade-up" data-aos-delay="80">
+            <a href="blog-detail.html">
+              <div class="blog-card-image">
+                <img src="./assets/images/machine-learning-workstation.jpg" alt="Machine learning workstation" width="800" height="500" loading="lazy">
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-meta"><span><i class="bi bi-calendar3" aria-hidden="true"></i> Mar 28, 2026</span><span>AI</span></div>
+                <h3>Choosing fine-tuning vs. prompting</h3>
+                <p class="blog-excerpt">Decision trees grounded in latency, drift, and data rights.</p>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- Section End -->
+
+    <!-- Section Start -->
+    <section class="cta-section section-alt" aria-labelledby="blog-cta-title">
+      <div class="container">
+        <div class="glass-card cta-box glow-pulse">
+          <div class="cta-content" data-aos="fade-up">
+            <h2 id="blog-cta-title">Want updates in your <span class="text-gradient">inbox</span>?</h2>
+            <p>Subscribe from the footer — no spam, just long-form essays and release notes worth reading.</p>
+            <a href="contact.html" class="btn-outline btn-magnetic">Talk editorial <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section End -->
+
+  </main>
+
+  <!-- Footer Start -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="navbar-brand">Syntrix<span>Soft</span></a>
+          <p>Empowering enterprises with world-class technology solutions since 2014.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
+            <a href="#" aria-label="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="careers.html">Careers</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Services</h4><ul><li><a href="service-web.html">Web Development</a></li><li><a href="service-mobile.html">Mobile Apps</a></li><li><a href="service-cloud.html">Cloud Solutions</a></li><li><a href="service-ai.html">AI Solutions</a></li></ul></div>
+        <div class="footer-col"><h4>Newsletter</h4><p class="footer-newsletter-desc">Subscribe for tech insights and updates.</p><form class="footer-newsletter newsletter-form" aria-label="Newsletter signup"><input type="email" name="email" placeholder="Your email" required aria-label="Email"><button type="submit" class="btn-primary">Subscribe</button></form></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; <span id="footer-year">2026</span> SyntrixSoft. All rights reserved.</p><div><a href="privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms-conditions.html">Terms &amp; Conditions</a></div></div>
+    </div>
+  </footer>
+  <!-- Footer End -->
+
+  <!-- Search Popup Start -->
+  <div class="search-popup" role="dialog" aria-label="Search" aria-hidden="true">
+    <div class="search-popup-inner">
+      <form role="search" aria-label="Site search"><input type="search" placeholder="Search..." aria-label="Search query" autocomplete="off"><button type="button" class="search-close" aria-label="Close search"><i class="bi bi-x-lg" aria-hidden="true"></i></button></form>
+      <div class="search-suggestions"><h4>Popular Searches</h4><a href="services.html">Cloud Solutions</a><a href="service-ai.html">AI Development</a><a href="portfolio.html">Case Studies</a><a href="careers.html">Open Positions</a></div>
+    </div>
+  </div>
+  <!-- Search Popup End -->
+
+  <!-- Back to Top Start -->
+  <button class="back-to-top" type="button" aria-label="Back to top"><i class="bi bi-arrow-up" aria-hidden="true"></i></button>
+  <!-- Back to Top End -->
+
+  <!-- WhatsApp Float Start -->
+  <a href="https://wa.me/14155550100" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+  <!-- WhatsApp Float End -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/animation.js"></script>
+</body>
+</html>
